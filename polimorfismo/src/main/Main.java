@@ -1,5 +1,8 @@
 package main;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import professor.ControleUniversidade;
 import professor.Professor;
 import professor.ProfessorEfetivo;
@@ -18,6 +21,19 @@ public class Main {
 		controle.adicionaProfessor(b);
 
 		System.out.println(controle.calculaTotalGasto());
+
+		// Downcast
+		ProfessorEfetivo profEfe = (ProfessorEfetivo) a;
+
+		// Upcast
+		Professor profCast = (Professor) profEfe;
+
+		Set<Professor> profs = new HashSet();
+		
+		profs.add(profEfe);
+		profs.add(profEfe);
+		profs.add(profEfe);
+		profs.add(profEfe);
 
 	}
 
